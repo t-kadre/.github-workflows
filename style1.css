@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 100%;
+}
+.img-banner {
+    display: none;/*as we're designing for mobile, we dont want it to appear right now*/
+}
+.img-info {
+    width: 100%;
+}
+.img-info h2 {
+    padding: 30px 30px 20px;/*30 px from top, left, right, and 20 from bottom*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: #111;
+    line-height: 44px;
+    text-align: center;
+}
+.img-info p {
+    padding: 0px 30px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+    text-align: center;
+}
+.img-sign {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {/*the media statement tells css only to run the code in the curly brackets if the statement afterwards is true, meaning run the code if we have a screen and the screen has a min width of 768 px = ipad width*/
+    .img-banner {
+        display: block;/*display the image*/
+        width: 100%;/*this image will cover the entire width of the device, and not just the wrapper*/
+        padding-bottom: 30px;
+    }
+    .wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+    .img-info h2 {
+        padding: 20px 0px 0px;
+    }
+    .img-info p {
+        padding: 20px 0px 0px;
+    }
+    .img-sign {
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .wrapper {
+        width: 1000px;
+    }
+    .img-info {
+        width: 50%;
+        float: right;/*makes the elements align horizontally next to each other*/
+    }
+    .img-sign {
+        padding-top: 0px;
+        width: 50%;
+        float: left;
+    }
+    .img-info h2 {
+        padding: 20px 0px 0px 30px;
+    }
+    .img-info p {
+        padding: 20px 0px 0px 30px;
+    }
+}
